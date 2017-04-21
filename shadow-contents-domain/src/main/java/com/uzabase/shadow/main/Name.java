@@ -11,5 +11,4 @@ import lombok.Value;
 public class Name {
 
     private final String value;
-
 }

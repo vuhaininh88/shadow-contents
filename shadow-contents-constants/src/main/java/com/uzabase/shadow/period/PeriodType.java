@@ -4,6 +4,7 @@ import com.uzabase.shadow.util.HasStringValue;
 import lombok.AllArgsConstructor;
 
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * Class to define constants about period relative with financial times.
@@ -32,6 +33,8 @@ public enum PeriodType implements HasStringValue {
     PTM("PTM");
 
     private String code;
+
+    public static List<PeriodType> DEFAULT_SORT = Arrays.asList(FY4, LTM, CY4, FF4, HF1, HF2);
 
     public static PeriodType get(String code) {
         return Arrays.stream(values()).filter(e -> e.code.equals(code)).findFirst().orElseThrow(() -> new IllegalArgumentException(String.format("args is [%s]", code)));
