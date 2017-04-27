@@ -11,6 +11,8 @@
     <modules>
         <module>shadow-contents-domain</module>
         <module>shadow-contents-constants</module>
+        <module>shadow-contents-repositoty</module>
+        <module>shadow-contents-object</module>
     </modules>
 
     <dependencies>

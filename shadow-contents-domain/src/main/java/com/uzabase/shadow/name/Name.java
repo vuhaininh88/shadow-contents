@@ -1,4 +1,4 @@
-package com.uzabase.shadow.main;
+package com.uzabase.shadow.name;
 
 import lombok.Value;
 

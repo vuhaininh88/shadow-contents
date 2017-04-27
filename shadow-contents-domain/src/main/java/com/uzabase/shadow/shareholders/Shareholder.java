@@ -2,7 +2,7 @@ package com.uzabase.shadow.shareholders;
 
 import com.uzabase.shadow.financial.Unit;
 import com.uzabase.shadow.financial.period.Period;
-import com.uzabase.shadow.main.Name;
+import com.uzabase.shadow.name.Name;
 import com.uzabase.shadow.period.PeriodType;
 import lombok.Value;
 
