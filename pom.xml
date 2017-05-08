@@ -11,9 +11,18 @@
     <modules>
         <module>shadow-contents-domain</module>
         <module>shadow-contents-constants</module>
-        <module>shadow-contents-repositoty</module>
         <module>shadow-contents-object</module>
+        <module>shadow-contents-api</module>
+        <module>shadow-contents-repository</module>
+        <module>shadow-contents-service</module>
+        <module>shadow-contents-application</module>
     </modules>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.2.RELEASE</version>
+    </parent>
 
     <dependencies>
         <dependency>
