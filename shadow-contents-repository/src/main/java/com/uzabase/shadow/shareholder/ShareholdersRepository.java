@@ -4,6 +4,7 @@ import com.uzabase.shadow.GlobalId;
 import com.uzabase.shadow.entity.common.speeda.ShrHld;
 import com.uzabase.shadow.entity.common.speeda.ShrHld_;
 import com.uzabase.shadow.shareholders.Shareholders;
+import lombok.extern.log4j.Log4j;
 
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -14,6 +15,7 @@ import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 
 @Named
+@Log4j
 public class ShareholdersRepository {
 
     @Inject
@@ -26,7 +28,7 @@ public class ShareholdersRepository {
         CriteriaQuery<ShrHld> query = b.createQuery(ShrHld.class);
 
         query.where(shareholdersDetectionPredicates(b, query.from(ShrHld.class), id));
-
+        log.info("Finding shareholders for GlobalID:" + id.getValue());
         return factory.create(entityManager.createQuery(query).getResultList());
     }
 

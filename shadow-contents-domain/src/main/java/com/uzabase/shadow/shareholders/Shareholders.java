@@ -66,4 +66,8 @@ public class Shareholders implements CollectionSupporter<Shareholder> {
     public Iterator<Shareholder> iterator() {
         return shareholders.iterator();
     }
+
+    public int size() {
+        return shareholders.size();
+    }
 }

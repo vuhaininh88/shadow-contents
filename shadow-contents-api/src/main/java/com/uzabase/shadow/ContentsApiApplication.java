@@ -1,9 +1,10 @@
 package com.uzabase.shadow;
 
-import com.uzabase.shadow.shareholder.ShareholdersController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.context.annotation.Import;
 
 /**
  * Contents API application to run project
@@ -11,7 +12,9 @@ import org.springframework.context.annotation.ComponentScan;
  * Created by Trung-Vu on 2017/05/01.
  */
 @SpringBootApplication
-@ComponentScan(basePackageClasses = ShareholdersController.class)
+@Import(JpaConfiguration.class)
+@EntityScan(basePackages = {"com.uzabase.shadow.entity.common.speeda"})
+@EnableCaching
 public class ContentsApiApplication {
 
     public static void main(String[] args) {

@@ -5,6 +5,7 @@ import com.uzabase.shadow.financial.period.PeriodTypes;
 import com.uzabase.shadow.number.Limit;
 import com.uzabase.shadow.shareholders.Shareholders;
 import com.uzabase.shadow.sort.SortType;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.*;
 
 import javax.inject.Inject;
@@ -14,7 +15,7 @@ import javax.inject.Inject;
  */
 @RestController
 @RequestMapping(value = "/contents/companies")
-public class ShareholdersController {
+public class ShareholdersResource {
 
     @Inject
     private ShareholdersApplication shareholdersApplication;
@@ -22,6 +23,7 @@ public class ShareholdersController {
     private ShareholdersMapper mapper;
 
     @RequestMapping(value = "/{globalId}/shareholders", method = RequestMethod.GET)
+    @Cacheable("shareholders")
     public ShareholdersJson getShareholders(@PathVariable("globalId") GlobalId globalId,
                                             @RequestParam(value = "periods", required = false, defaultValue = "FY4") PeriodTypes types,
                                             @RequestParam(value = "limit", required = false, defaultValue = "11") Limit limit,
