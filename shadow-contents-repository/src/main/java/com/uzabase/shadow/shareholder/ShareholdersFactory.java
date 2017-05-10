@@ -15,7 +15,14 @@ public class ShareholdersFactory {
 
     public Shareholders create(List<ShrHld> shrHlds) {
         return new Shareholders(shrHlds.stream()
-                .map(e -> Shareholder.of(e.getZcShrHldNameVch(), e.getAccSttlCd(), e.getAccSttlYear(), e.getShrHldNum(), e.getShrHldRtoNum(), e.getAccSttlPeriodNum(), e.getAnmlAccSttlSgn()))
+                .map(e -> Shareholder.of(
+                        e.getZcShrHldNameVch(),
+                        e.getAccSttlCd(),
+                        e.getAccSttlYear(),
+                        e.getShrHldNum(),
+                        e.getShrHldRtoNum(),
+                        e.getAccSttlPeriodNum(),
+                        e.getAnmlAccSttlSgn()))
                 .collect(toList()));
     }
 }
