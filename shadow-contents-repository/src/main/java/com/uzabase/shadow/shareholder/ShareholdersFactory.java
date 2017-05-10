@@ -10,6 +10,11 @@ import java.util.List;
 
 import static java.util.stream.Collectors.toList;
 
+/**
+ * ShareHoldersFactory to create instance of Shareholders class via Factory Method Pattern
+ * <p>
+ * Created by Trung Vu on 2017/05/11.
+ */
 @Named
 public class ShareholdersFactory {
 
