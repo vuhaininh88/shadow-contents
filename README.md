@@ -10,4 +10,4 @@ git clone git@github.com:chariot9/shadow-contents.git
 Execute command: mvn clean install  
 Run main class: ContentsApiApplication.class
 ## License
-Created by Trung, Japan 2017 
+Created by Trung, Yokohama Japan 2017 
