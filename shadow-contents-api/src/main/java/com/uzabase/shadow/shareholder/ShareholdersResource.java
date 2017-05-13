@@ -6,7 +6,10 @@ import com.uzabase.shadow.number.Limit;
 import com.uzabase.shadow.shareholders.Shareholders;
 import com.uzabase.shadow.sort.SortType;
 import org.springframework.cache.annotation.Cacheable;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 import javax.inject.Inject;
 
@@ -22,9 +25,9 @@ public class ShareholdersResource {
     @Inject
     private ShareholdersMapper mapper;
 
-    @RequestMapping(value = "/{globalId}/shareholders", method = RequestMethod.GET)
+    @RequestMapping(value = "/shareholders", method = RequestMethod.GET)
     @Cacheable("shareholders")
-    public ShareholdersJson getShareholders(@PathVariable("globalId") GlobalId globalId,
+    public ShareholdersJson getShareholders(@RequestParam(value = "globalId") GlobalId globalId,
                                             @RequestParam(value = "periods", required = false, defaultValue = "FY4") PeriodTypes types,
                                             @RequestParam(value = "limit", required = false, defaultValue = "11") Limit limit,
                                             @RequestParam(value = "sort", required = false, defaultValue = "DESCENDING") SortType sortType) {

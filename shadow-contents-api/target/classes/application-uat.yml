@@ -6,3 +6,5 @@ spring:
     username: developer
     password: developer
     driverClassName: com.mysql.jdbc.Driver
+config:
+  duration: 60

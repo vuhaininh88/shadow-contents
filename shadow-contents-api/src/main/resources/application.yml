@@ -6,7 +6,5 @@ spring:
     username: developer
     password: developer
     driverClassName: com.mysql.jdbc.Driver
-    
-  cache:
-    ehcache:
-       config: classpath:ehcache.xml
+config:
+  duration: 60

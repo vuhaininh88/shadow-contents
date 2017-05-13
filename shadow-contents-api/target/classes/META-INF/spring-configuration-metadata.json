@@ -1,0 +1,13 @@
+{
+  "groups": [{
+    "name": "config",
+    "type": "com.uzabase.shadow.cache.CacheDuration",
+    "sourceType": "com.uzabase.shadow.cache.CacheDuration"
+  }],
+  "properties": [{
+    "name": "config.duration",
+    "type": "java.lang.Integer",
+    "sourceType": "com.uzabase.shadow.cache.CacheDuration"
+  }],
+  "hints": []
+}
